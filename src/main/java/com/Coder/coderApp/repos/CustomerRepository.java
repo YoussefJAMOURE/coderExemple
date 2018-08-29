@@ -4,6 +4,7 @@ import java.util.List;
 import com.Coder.coderApp.entities.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+@Repository
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
     List<Customer> findByLastName(String lastName);
