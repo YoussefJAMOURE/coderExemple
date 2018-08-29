@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 @EnableJpaRepositories(basePackages = { "com.Coder.coderApp.repos" })
 @EntityScan(basePackages = { "com.Coder.coderApp.entities" })
-@ComponentScan("com.Coder.coderApp.components")
+@ComponentScan({"com.Coder.coderApp.components","com.Coder.coderApp.controllers"})
 public class CoderAppApplication {
 
 	public static void main(String[] args) {

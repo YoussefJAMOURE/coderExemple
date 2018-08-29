@@ -1,4 +1,4 @@
-package com.Coder.coderApp.controlers;
+package com.Coder.coderApp.controllers;
 
 import java.util.List;
 
