@@ -1,16 +1,17 @@
+package com.Coder.coderApp.components;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.github.javafaker.Faker;
-
 import com.Coder.coderApp.entities.Customer;
 import com.Coder.coderApp.repos.CustomerRepository;
+import com.github.javafaker.Faker;
+
+
 
 
 @Component
@@ -22,7 +23,7 @@ public class Seed {
 
 	@PostConstruct
 	public void seed() {
-        System.out.println("the Seeding Bean .... ");
+        System.out.println("the Seeding Bean .... Start");
 		//creating the feaker and list of entities
 		Faker faker = new Faker();
 		List<Customer> fakedCustomers = new ArrayList<Customer>();
@@ -35,6 +36,6 @@ public class Seed {
 		
 		//Adding 'customers' to the data base
 		customers.saveAll(fakedCustomers);
-		
+		System.out.println("the Seeding Bean .... END");
 	}
 }
