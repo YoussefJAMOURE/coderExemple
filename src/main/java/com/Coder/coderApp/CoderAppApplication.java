@@ -14,12 +14,12 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @ComponentScan({"com.Coder.coderApp.components","com.Coder.coderApp.controllers"})
 public class CoderAppApplication extends SpringBootServletInitializer{
 
-	 @Override
-	    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-	        return application.sources(CoderAppApplication.class);
-	    }
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(CoderAppApplication.class);
+	}
 
-	    public static void main(String[] args) {
-	        SpringApplication.run(CoderAppApplication.class, args);
-	    }
+	public static void main(String[] args) {
+		SpringApplication.run(CoderAppApplication.class, args);
+	}
 }
