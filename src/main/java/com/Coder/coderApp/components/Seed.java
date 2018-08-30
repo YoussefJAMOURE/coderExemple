@@ -29,7 +29,7 @@ public class Seed {
 		List<Customer> fakedCustomers = new ArrayList<Customer>();
 		
 		//creating 'customers'
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 30; i++) {
 			Customer obj = new Customer(faker.name().firstName(), faker.name().lastName());
 			fakedCustomers.add(obj);
 		}

@@ -29,13 +29,12 @@ public class Bridge{
 	}
     
     @GetMapping(value="/getAll")
-   	public List<Customer> getAll() {
+   	public ModelAndView getAll() {
     	System.out.println("-----------------> calling /getAll");
-   		return customers.findAll();
+    	List<Customer> listUsers = customers.findAll();
+    	ModelAndView m = new ModelAndView("users");
+    	m.addObject("users",listUsers);
+   		return m;
    	}
-    @GetMapping(value="/i")
-   	public String f() {
-    	System.out.println("-----------------> calling /i");
-    	return "index";
-   	}
+
 }
